@@ -1,0 +1,34 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Filtrar Tags" Height="380" Width="300" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True">
+    
+    <StackPanel Margin="15">
+        <TextBlock Text="Filtrar Tags de:" FontWeight="Bold" Margin="0,0,0,5"/>
+        <ComboBox x:Name="comboCategoria" Height="25" Margin="0,0,0,15"/>
+
+        <TextBlock Text="Texto para buscar:" FontWeight="Bold" Margin="0,0,0,5"/>
+        <TextBox x:Name="inputTexto" Height="25" Margin="0,0,0,15" Text=""/>
+
+        <TextBlock Text="Regra:" FontWeight="Bold" Margin="0,0,0,5"/>
+        <ComboBox x:Name="comboRegra" SelectedIndex="0" Height="25" Margin="0,0,0,20">
+            <ComboBoxItem Content="Contém"/>
+            <ComboBoxItem Content="Não Contém"/>
+            <ComboBoxItem Content="Igual a"/>
+            <ComboBoxItem Content="Inicia com"/>
+            <ComboBoxItem Content="Termina com"/>
+            <ComboBoxItem Content="É Maior que"/>
+            <ComboBoxItem Content="É Menor que"/>
+        </ComboBox>
+
+        <Button Content="Filtrar" Height="35" Click="btn_clique" FontWeight="Bold"/>
+
+        <TextBlock x:Name="txtStatus" 
+                   Text="Pronto para usar." 
+                   HorizontalAlignment="Center" 
+                   Margin="0,15,0,0" 
+                   Foreground="Gray" 
+                   TextWrapping="Wrap"/>
+                   
+    </StackPanel>
+</Window>
